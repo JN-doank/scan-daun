@@ -15,9 +15,9 @@ export default async function handler(req, res) {
         
         // 1. Siapkan Array untuk 3 API Key (Sistem Rotasi Anti Limit 429)
         const keys = [
-            process.env.GEMINI_API_KEY,
-            process.env.GEMINI_API_KEY_2,
-            process.env.GEMINI_API_KEY_3
+            process.env.AIzaSyDA2TXuPVxoKOmAbGmYj50zAhHj_0xa6c,
+            process.env.AIzaSyAC8Gz3k1icctxB61j9UVsx9WXIqqnRh9U,
+            process.env.AIzaSyB_xikG9qdVmRpJQ71v681KPBAWTJR2Lf0
         ].filter(Boolean); // Hanya ambil key yang terisi di Vercel
 
         if (keys.length === 0) throw new Error("API Key belum diset di Environment Variable Vercel!");
