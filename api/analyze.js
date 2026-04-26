@@ -15,9 +15,9 @@ export default async function handler(req, res) {
         
         // 1. Siapkan Array untuk 3 API Key (Sistem Rotasi Anti Limit 429)
         const keys = [
-            process.env.AIzaSyDA2TXuPVxoKOmAbGmYj50zAhHj_0xa6c,
-            process.env.AIzaSyAC8Gz3k1icctxB61j9UVsx9WXIqqnRh9U,
-            process.env.AIzaSyB_xikG9qdVmRpJQ71v681KPBAWTJR2Lf0
+            process.env.AIzaSyDwfuOdt0vOD7YEIYiBy8erLhXVPwSWSqw,
+            process.env.AIzaSyCRw59tXezQ3P_Q3TZvZH7l06b9CL1z6Bo,
+            process.env.AIzaSyCsj3OvPJ1LViIK6KPOnCdmyPPZVtwDovw
         ].filter(Boolean); // Hanya ambil key yang terisi di Vercel
 
         if (keys.length === 0) throw new Error("API Key belum diset di Environment Variable Vercel!");
@@ -36,7 +36,7 @@ export default async function handler(req, res) {
 
 TUGAS UTAMA DAN FILTER (WAJIB DIIKUTI):
 1. Cek apakah gambar berisi bagian flora (akar, batang, daun, bunga, atau buah).
-2. JIKA GAMBAR ADALAH: Manusia, wajah, hewan, benda mati, atau gambar acak non-tanaman, BERHENTI SEGERA. Jawab HANYA dengan: "ERROR_INVALID_IMAGE: Maaf, Flora Scan AI hanya dapat mendeteksi flora (akar, batang, daun, bunga, buah). Harap unggah foto yang relevan."
+2. JIKA GAMBAR ADALAH: Manusia, wajah, hewan, benda mati, atau gambar acak non-tanaman, BERHENTI SEGERA. Jawab HANYA dengan: "ERROR_INVALID_IMAGE: Maaf, DAUNMU Scan AI hanya dapat mendeteksi flora (akar, batang, daun, bunga, buah). Harap unggah foto yang relevan."
 3. JIKA GAMBAR VALID, berikan diagnosa yang sangat mendalam.
 
 WAJIB IKUTI STRUKTUR INI SECARA BERURUTAN (JANGAN DIKURANGI):
