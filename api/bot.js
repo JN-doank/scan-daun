@@ -37,7 +37,7 @@ export default async function handler(req, res) {
                 .eq('id', 1);
 
             if (error) throw error;
-            await sendTelegramMsg(chatId, "✅ *Berhasil!*\nPesan notifikasi Flora.AI telah diperbarui. Silakan cek website Anda.");
+            await sendTelegramMsg(chatId, "✅ *Berhasil!*\nPesan notifikasi DAUNMU.AI telah diperbarui. Silakan cek website Anda.");
         }
 
         // --- PERINTAH 2: AKTIFKAN MAINTENANCE MODE ---
@@ -59,12 +59,12 @@ export default async function handler(req, res) {
                 .eq('id', 1);
 
             if (error) throw error;
-            await sendTelegramMsg(chatId, "✅ *Mode Perbaikan DIMATIKAN.*\nWebsite Flora.AI kembali berjalan normal.");
+            await sendTelegramMsg(chatId, "✅ *Mode Perbaikan DIMATIKAN.*\nWebsite Daunmu.AI kembali berjalan normal.");
         }
         
         // --- PERINTAH 4: MENU BANTUAN ---
         else if (text === '/start' || text === '/help') {
-            const helpMsg = `🤖 *Flora.AI Admin Bot*\n\nPerintah yang tersedia:\n1. \`/update [pesan]\` - Mengganti teks notifikasi lonceng.\n2. \`/update \` (pakai spasi kosong) - Menghapus notifikasi lonceng.\n3. \`/maintenance on\` - Mengunci website.\n4. \`/maintenance off\` - Membuka website.`;
+            const helpMsg = `🤖 *Daunmu.AI Admin Bot*\n\nPerintah yang tersedia:\n1. \`/update [pesan]\` - Mengganti teks notifikasi lonceng.\n2. \`/update \` (pakai spasi kosong) - Menghapus notifikasi lonceng.\n3. \`/maintenance on\` - Mengunci website.\n4. \`/maintenance off\` - Membuka website.`;
             await sendTelegramMsg(chatId, helpMsg);
         }
 
